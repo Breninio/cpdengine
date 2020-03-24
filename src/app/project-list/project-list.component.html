@@ -1,0 +1,16 @@
+<nav>
+  <a routerLink="/setup" routerLinkActive="active">New Learning Opportunity SetUp</a>
+</nav>
+<table id="projects">
+  <tr>
+    <th *ngFor="let column of headers">
+      {{column}}
+    </th>
+  </tr>
+  <tr *ngFor="let row of projects">
+    <td *ngFor="let col of headers">
+      {{row[col]}}
+    </td>
+
+  </tr>
+</table>

@@ -1,0 +1,26 @@
+<h2>New Client Set-Up Form</h2>
+<form [formGroup]="setupForm" (ngSubmit)="onSubmit()">
+<div>
+<label>
+  Learning Opportunity ID:
+  <input type="text" formControlName="projectID">
+</label>
+</div>
+
+<div>
+<label>
+  Learning Opportunity Name:
+  <input type="text" formControlName="projectName">
+</label>
+</div>
+
+<div>
+<label>
+  Learning Oportunity Manager:
+  <input type="text" formControlName="projectManager">
+</label>
+</div>
+  <p>
+  <button type="submit">Submit</button>
+</p>
+</form>
