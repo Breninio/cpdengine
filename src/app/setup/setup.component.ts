@@ -30,7 +30,7 @@ export class SetupComponent implements OnInit {
     projects.project_id = this.setupForm.value.projectID;
     projects.project_name = this.setupForm.value.projectName;
     projects.project_manager = this.setupForm.value.projectManager;
-    this.addprojectservice.addProject(projects);
+    this.addprojectservice.addProject(projects).subscribe(data => this.setupForm);
     console.warn(projects.project_name);
   }
 }

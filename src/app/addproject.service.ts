@@ -13,11 +13,11 @@ import { HttpErrorHandler, HandleError } from './http-error-handler.service';
 export class AddprojectService {
   url = 'http://127.0.0.1:5000/new';
   private handleError: HandleError;
-  /*httpOptions = {
+  httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json'
     })
-  };*/
+  };
 
   constructor(private http: HttpClient, httpErrorHandler: HttpErrorHandler) {
     this.handleError = httpErrorHandler.createHandleError('AddProjectService');
@@ -30,7 +30,7 @@ export class AddprojectService {
 
   }*/
   addProject(project: Projects): Observable<Projects> {
-    return this.http.post<Projects>(this.url, project)
+    return this.http.post<Projects>(this.url, project, this.httpOptions)
       .pipe(
         catchError(this.handleError('addProject', project))
       );

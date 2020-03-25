@@ -67,7 +67,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "cpdengine:build:production"
+              "browserTarget": "cpdengine:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },

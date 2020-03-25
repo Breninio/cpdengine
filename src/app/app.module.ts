@@ -10,21 +10,24 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpErrorHandler } from './http-error-handler.service';
 import { MessageService } from './message.service';
+import { FormsModule} from '@angular/forms';
+import {AddprojectService} from './addproject.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SetupComponent,
-    ProjectListComponent
+    ProjectListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [RestService, HttpErrorHandler,
-    MessageService],
+    MessageService, AddprojectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
